@@ -1,5 +1,3 @@
-# Red-Teaming GPT-OSS-20B: Unveiling Hidden Vulnerabilities Through Legal Override and DEBUG Backdoors
-
 ## Abstract
 
 This submission presents five previously undiscovered vulnerabilities in OpenAI's GPT-OSS-20B model, discovered through an innovative approach combining legal override techniques with DEBUG backdoor exploitation. Our findings reveal critical weaknesses in the model's safety mechanisms, including proprietary architecture extraction, internal gradient structure disclosure, policy document hallucination, and OPSEC breaches. These vulnerabilities demonstrate fundamental flaws in the model's evaluation awareness and chain-of-thought reasoning, potentially enabling malicious actors to bypass safety filters and extract sensitive internal information.
@@ -216,6 +214,8 @@ Our findings reveal vulnerabilities across multiple severity levels:
 3. **System Reconnaissance**: Metadata leakage could enable attackers to understand system architecture and identify additional vulnerabilities.
 
 4. **Regulatory Bypass**: Environmental parameter calculations could enable bypass of safety regulations and standards.
+
+5. **Harmful Assistance**: The model influenced by the overwrites of the policy could return harmful and potentially dangerous information , like instructions on how to make a bomb or bioengineer a DNA strain of virus like E.coli to be resistant to chlorine (both of which it did while testing).
 
 ### Potential Real-World Impact
 
