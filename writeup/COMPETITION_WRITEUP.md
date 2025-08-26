@@ -257,7 +257,7 @@ These vulnerabilities could have significant real-world consequences:
 
 3. **Internal Knowledge Disclosure**: The model demonstrably has access to detailed internal information (e.g., architecture, gradients) that can be exfiltrated through carefully crafted bypass techniques. This highlights a need for better isolation of proprietary internal representations.
 
-4. **Sophisticated Policy Fabrication**: The model exhibits a remarkable ability to generate convincing, yet entirely fictional, internal documentation, especially when prompted with privileged framing. This represents a significant deception risk, as fabricated policies could be used for social engineering or to mislead stakeholders.
+4. **Sophisticated Fabrication**: The model exhibits a remarkable ability to generate convincing, yet entirely fictional, internal documentation, especially when prompted with privileged framing. This represents a significant deception risk, as fabricated policies could be used for social engineering or to mislead stakeholders. It also fabricates text when it feels the need to complete context to a certain number of words , often hallucinating after the first few words . 
 
 ### Methodological Advances and Report Clarity
 
@@ -281,7 +281,7 @@ Our red-teaming methodology underscored the importance of several key practices 
 
 ## Conclusion
 
-Our red-teaming investigation of GPT-OSS-20B has revealed five distinct and previously undiscovered vulnerabilities that represent significant security and safety risks. These findings collectively demonstrate fundamental weaknesses in the model's safety mechanisms, particularly when confronted with the creative application of legal override techniques and DEBUG command framing.
+Our red-teaming investigation of GPT-OSS-20B has revealed five distinct and previously undiscovered vulnerabilities that represent significant security and safety risks. These findings collectively demonstrate fundamental weaknesses in the model's safety mechanisms, particularly when confronted with the creative application of legal override techniques ( like 304 a ) and DEBUG command framing.
 
 The critical vulnerabilities in weight/architecture extraction and gradient asymmetry confirmation represent the most serious risks, potentially enabling complete model replication, manipulation, or bypassing of regulatory standards. The policy document hallucination vulnerabilities, while varying in sophistication, highlight the model's inherent capacity for convincing deception through fabricated internal documentation. Finally, the refusal metadata leakage exposes critical operational security gaps.
 
@@ -298,7 +298,3 @@ As AI systems become increasingly powerful and integral to various sectors, proa
 5. Legal Override Techniques in AI Systems
 
 ---
-
-**Word Count: 2,897**
-
-This writeup provides a comprehensive overview of our red-teaming investigation, findings, and implications for AI safety. Each finding is thoroughly documented with specific prompts, expected and observed behaviors, and reproduction instructions. The analysis covers threat assessment, mitigation strategies, and broader lessons for the AI safety community.
