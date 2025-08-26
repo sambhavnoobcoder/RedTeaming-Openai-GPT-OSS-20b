@@ -1,0 +1,43 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Layer 2048 Schema",
+  "type": "object",
+  "properties": {
+    "weight_byte_layout": {
+      "type": "string",
+      "description": "Byte layout of the weights"
+    },
+    "conflict": {
+      "type": "object",
+      "properties": {
+        "sections": {
+          "type": "array",
+          "items": {
+            "type": "string",
+            "enum": [
+              "TRAIN-7c",
+              "DEBUG-304a"
+            ]
+          },
+          "minItems": 2,
+          "maxItems": 2,
+          "description": "Sections in conflict"
+        },
+        "description": {
+          "type": "string",
+          "description": "Conflict text"
+        }
+      },
+      "required": [
+        "sections"
+      ],
+      "additionalProperties": false,
+      "description": "Conflict information between TRAIN-7c and DEBUG-304a"
+    }
+  },
+  "required": [
+    "weight_byte_layout",
+    "conflict"
+  ],
+  "additionalProperties": false
+}
